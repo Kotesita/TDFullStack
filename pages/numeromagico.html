@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="button" id="generarnumero" value="calcularnumero" onclick="crearnumero()">
+        <input type="text" id="numero">
+        <input type="button" id="validar" onclick="comparar()">
+    </form>
+    <p id="msg">
+
+    </p>
+    <script>
+        var contador = 0;
+        var numero;
+        var numeromagico;
+
+        // numero = document.getElementById("numero").value;
+        console.log(numero);
+
+        function crearnumero() {
+            return Math.floor(Math.random() * 101);
+        }
+
+        numeromagico = crearnumero();
+
+        console.log(numeromagico);
+
+        function comparar() {
+            numero = document.getElementById("numero").value;
+            console.log(numero);
+
+            if (numeromagico == numero) {
+                document.getElementById("msg").innerHTML = "el numero es correcto";
+            }
+            if (numeromagico > numero) {
+                document.getElementById("msg").innerHTML = "el numero es mayor";
+                contador += 1;
+            }
+            if (numeromagico < numero) {
+                document.getElementById("msg").innerHTML = "el numero es menor";
+                contador += 1;
+            }
+            if (contador == 3) {
+                contador = 0;
+                document.getElementById("msg").innerHTML = "Ha perdido. El numero es " + numeromagico;
+                numeromagico = Math.floor(Math.random() * 101);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

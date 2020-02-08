@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background: 0;
+}
+
+@font-face {
+    font-family: 'Play';
+    src: url('../fonts/Play-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/Pacifico-Regular.ttf')
+}
+
+body {
+    width: 1000px
+}
+
+.header {
+    vertical-align: top;
+}
+
+.header h2 {
+    font-family: 'Play';
+    width: 300px;
+    display: inline-block;
+    margin: 10px
+}
+
+.header h3 {
+    font-family: 'Pacifico';
+    text-align: end;
+    width: 650px;
+    display: inline-block;
+    margin: 10px
+}
+
+.container {
+    background-image: radial-gradient(#6F5964, #231217);
+}
+
+.profile img {
+    vertical-align: top;
+    border: 5px #C0C0C0 solid;
+    margin: 10px;
+    display: inline-block;
+    max-width: 470px;
+}
+
+.info {
+    margin: 12px;
+    vertical-align: top;
+    display: inline-block;
+    max-width: 470px;
+    font-family: Arial;
+}
+
+.info thead {
+    color: #FFFFFF;
+    background-image: linear-gradient(#AEAEB2, #878593, #AEAEB2);
+    text-align: left;
+}
+
+.info tbody {
+    background-color: #FFFFFF;
+    height: 320px;
+    max-width: 470px;
+    overflow: hidden;
+    white-space: pre-line;
+    text-align: justify;
+    background-image: linear-gradient(to right, #FEFDFE, #EDE5EC, #DBCCDA);
+}
+
+.experience {
+    font-size: 12px;
+    border-collapse: inherit;
+}
+
+.experience table img {
+    vertical-align: top;
+    margin: 5px;
+    display: inline-block;
+    max-width: 300px;
+}
+
+.experience .sub img{
+  max-width: 46px;
+  display: inline-block;
+}
+
+.experience .sub{
+  margin-bottom: 25px !important;
+  padding-right: 5px !important;
+}
+
+.experience .info{
+  max-width: 300px;
+  margin-bottom: -15px;
+}
+
+.button {
+  background-color: #407D61; /* Green */
+  border: none;
+  margin-left: 100px;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  box-shadow: 2px 5px #888888;
+}
+
+.footer{
+  padding: 50px;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-family: Arial;
+}
+.footer img{
+  max-width: 20px;
+  display: inline-block;
+}
+
+.footer p a {
+  text-decoration: none;
+  color: black;
+}

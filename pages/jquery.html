@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+            alert("LISTO!");
+
+            $()
+            $("p").click(function() {
+                $(this).hide();
+            });
+
+            $("p").click(function() {
+                $("#info").show();
+            });
+
+            $("#info").click(function() {
+                $("p").show();
+            })
+
+            $("#info").click(function() {
+                $("#info").hide();
+            })
+
+            $("h2").hover(function() {
+                $("h2").append(" Toma agua. ");
+
+            })
+
+            $("#color").click(function() {
+                $("h3").slideDown("slow", function() {})
+            })
+
+            $("#color").click(function() {
+                $("#nocolor").show()
+            })
+            $("#nocolor").click(function() {
+                $("h3").css("color", "#000000")
+            })
+        });
+    </script>
+
+    <h1>HOLA, bienvenido a la demostración de jQuery</h1>
+    <p>Si haces click me escondo</p>
+    <p>Si haces click me escondo</p>
+    <p>Si haces click me escondo</p>
+    <p>Si haces click me escondo</p>
+    <button style="display: none" id="info">Si haces click aquí los vuelvo a mostrar</button>
+    <h2>Cada vez que pases por aquí agregaré un mensajito</h2>
+    <button id="color">Si clickeas aquí mostraré un texto en colores</button>
+    <h3 style="background-image: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); color:cornsilk; display: none;">Texto en colores</h3>
+    <button id="nocolor" style="display: none;">Si clickeas aquí le quito el color al texto</button>
+</body>
+
+</html>

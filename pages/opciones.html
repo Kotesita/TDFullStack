@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de registro</title>
+</head>
+
+<body style="background-color: #F92672; color: #FFFFFF;">
+    <table>
+        <h1>
+            Mi formulario de registro
+        </h1>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="" method="POST">
+                <tr>
+                    <td><label for="nombre">Nombre:  </label></td>
+                    <td><input type="text" id="nombre" name="nombre"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="apellido">Apellido: </label></td>
+                    <td><input type="text" id="apellido" name="apellido"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="text" id="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="psw">Contraseña: </label></td>
+                    <td><input type="password" id="psw" name="password"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="confirmar-psw">Confirmar: </label></td>
+                    <td><input type="password" id="confirmar-psw" name="confirmar-psw"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="cumpleanos">Cumpleaños: </label></td>
+                    <td><input type="date" id="cumpleanos" name="cumpleanos"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="radio" id="masculino" name="genero">
+                        <label for="masculino">Masculino</label>
+
+                        <input type="radio" id="femenino" name="genero">
+                        <label for="femenino">Femenino</label>
+
+                        <input type="radio" id="nodecir" name="genero">
+                        <label for="nodecir">Prefiero no decir</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Una breve descripción sobre ti: </p>
+                    </td>
+                    <td><textarea name="descripcion"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="lenguaje">
+                            <option value="javascript">JavaScript</option>
+                            <option value="C">C</option>
+                            <option value="Python">Python</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Enviar"></td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+</body>
+
+</html>
