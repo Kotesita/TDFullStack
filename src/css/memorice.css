@@ -1,0 +1,26 @@
+#tabla td {
+    background-color: black;
+    border: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+#tabla {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.centrar {
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+img {
+    width: 190px;
+    height: 190px
+}
+
+body {
+    background-image: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+}
