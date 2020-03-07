@@ -21,7 +21,13 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title" id="nombrePokemon">Info Pokemon</h4>
+                        <h4 class="modal-title" id="nombrePokemon"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="alturaPokemon"></p>
+                    </div>
+                    <div class="modal-body">
+                        <p id="pesoPokemon"></p>
                     </div>
                     <div class="modal-body">
                         <p id="tiposPokemon"></p>
@@ -50,17 +56,25 @@
         var url = 'https://pokeapi.co/api/v2/pokemon/' + idFoto;
 
         var info = $.get(url, function(res) {
-            var nombrePokemon = '';
-            nombrePokemon = res.name;
+            console.log(res);
+            var nombrePokemon = res.name;
             const nameCapitalized = nombrePokemon.charAt(0).toUpperCase() + nombrePokemon.slice(1)
-            var tiposPokemon = '';
-            var alturaPokemon = '';
-            var pesoPokemon = '';
+            var tiposPokemon = "";
+            tiposPokemon += "<h4>Tipos:</h4>";
+            tiposPokemon += "<ul>";
+            for (var i = 0; i < res.types.length; i++) {
+                tiposPokemon += "<li>" + res.types[i].type.name + "</li>";
+            }
+            tiposPokemon += "</ul>";
+            var alturaPokemon = '<h4>Altura: </h4>' + res.height;
+            var pesoPokemon = '<h4>Peso: </h4>' + res.weight;
             $("#nombrePokemon").html(nameCapitalized);
+            $("#pesoPokemon").html(pesoPokemon);
+            $("#alturaPokemon").html(alturaPokemon);
+            $("#tiposPokemon").html(tiposPokemon);
 
         }, "json");
 
-        // document.getElementById('pokemon').innerHTML = nombrePokemon;
     })
 </script>
 
