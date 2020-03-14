@@ -1,0 +1,15 @@
+SELECT coun.name AS pais, lang.language AS idioma, CONCAT(lang.percentage, ' %') AS porcentaje FROM countries AS coun INNER JOIN languages AS lang ON coun.id=lang.country_id WHERE language like '%slovene%';
+
+SELECT coun.name AS pais, COUNT(cit.id) AS cantidad_ciudades FROM countries AS coun INNER JOIN cities AS cit ON coun.id=cit.country_id GROUP BY coun.name ORDER BY cantidad_ciudades desc;
+
+SELECT cit.name AS ciudades, cit.population AS poblacion FROM countries AS coun INNER JOIN cities AS cit ON coun.id=cit.country_id WHERE coun.name like '%mexico%' AND cit.population >= 500000 ORDER BY poblacion desc;
+
+SELECT coun.name AS pais, lang.language AS idioma, CONCAT(lang.percentage, ' %') AS porcentaje FROM countries AS coun INNER JOIN languages AS lang ON coun.id=lang.country_id WHERE lang.percentage >= 89 ORDER BY porcentaje;
+
+SELECT coun.name AS pais, SUM(cit.population) AS poblacion_por_pais FROM countries AS coun INNER JOIN cities AS cit ON coun.id=cit.country_id WHERE coun.surface_area<=501 GROUP BY coun.name HAVING poblacion_por_pais>=100000;
+
+SELECT name AS nombre, capital, life_expectancy AS esperanza_vida, government_form AS gobierno FROM countries WHERE government_form like 'constitutional monarchy' AND life_expectancy>=75;
+
+SELECT coun.name AS pais, cit.name AS ciudad, cit.district AS distrito, cit.population AS poblacion FROM countries AS coun INNER JOIN cities AS cit ON coun.id=cit.country_id WHERE cit.district LIKE '%buenos aires%' AND cit.population >= 500000;
+
+SELECT continent, count(id) FROM countries GROUP BY continent ORDER BY count(id) desc;
